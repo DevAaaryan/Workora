@@ -1,20 +1,32 @@
 .navbar {
   width: 100%;
-  height: 70px;
+  height: 80px;
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color: #F0FDF4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &.active{
+    background-color: white;
+    color: black;
+  }
 
   &_container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1000px;
     height: 100%;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
   }
 
   &_logo {
@@ -81,6 +93,21 @@
       width: 1400px;
       padding: 10px 0px;
     }
+  }
+
+  hr{
+    width: 100%;
+    height: 1px;
+    background-color: #f6f6f7;
+  }
+  .menu{
+    width: 1400px;
+    padding: 2.5px 0px ;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    color: grey;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
