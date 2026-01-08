@@ -19,6 +19,13 @@ const Navbar = () => {
                     <button className="btn signup">Join</button>
                 </div>
             </div>
+            <hr />
+
+            <div className="menu">
+                <span>Test</span>
+                <span>Test</span>
+            </div>
+
         </div>
     )
 }

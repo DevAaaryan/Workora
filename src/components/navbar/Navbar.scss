@@ -23,7 +23,7 @@
     cursor: pointer;
 
     span {
-      color: #1dbf73; // Workora brand green
+      color: #1dbf73; 
     }
   }
 
@@ -77,12 +77,23 @@
         background-color: #17a863;
       }
     }
+    .menu {
+      width: 1400px;
+      padding: 10px 0px;
+    }
   }
 }
 
-/* Responsive */
+
+// @media (max-width: 768px) {
+//   .navbar_links {
+//     display: none;
+//   }
+// }
+
 @media (max-width: 768px) {
   .navbar_links {
     display: none;
   }
 }
+
