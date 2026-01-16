@@ -9,6 +9,7 @@ import Orders from './pages/orders/Orders';
 import MyGigs from './pages/mygigs/MyGigs';
 import Messages from './pages/messages/Messages';
 import Message from './pages/message/Message';
+import "./App.scss"
 import {
   createBrowserRouter,
   RouterProvider,
