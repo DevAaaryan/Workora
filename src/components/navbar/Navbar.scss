@@ -10,6 +10,7 @@
   justify-content: flex-start;  
   align-items: center;
   transition: 1.5s all ease;
+  color: rgb(53, 53, 53);
 
   &.active{
     background-color: white;
@@ -18,7 +19,7 @@
 
   &_container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1300px;
     height: 75px;
     margin: 0 auto;
     padding: 0 24px;

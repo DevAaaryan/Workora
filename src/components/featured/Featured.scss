@@ -1,5 +1,43 @@
 .featured{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    background-color: #d9fce4;
+    color: rgb(53, 53, 53);
     .container{
+        width: 100%;
+        max-width: 1300px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            h1{
+                font-size: 40px;
+            }
+
+            .search{
+                .searchInput{
+
+                }
+
+                button{
+
+                }
+            }
+
+            .popular{
+                span{}
+                button{}
+
+            }
+
+        }
         
     }
 }

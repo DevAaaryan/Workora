@@ -8,7 +8,7 @@ const Featured = () => {
                 <h1>Find the perfect freelance services for your business</h1>
                 <div className="search">
                     <div className="searchInput">
-                        <img src="" alt="" />
+                        <img src="./img/search.png" alt="" />
                         <input type="text" placeholder='Try "building mobil app" ' />
                     </div>
                     <button>Search</button>
@@ -22,7 +22,9 @@ const Featured = () => {
                     <button>UI/UX Design</button>
                 </div>
             </div>
-            <div className="right"></div>
+            <div className="right">
+                <img src="./img/man.png" alt="" />
+            </div>
         </div>
     </div>
   )
