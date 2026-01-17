@@ -2,7 +2,7 @@
     height: 600px;
     display: flex;
     justify-content: center;
-    background-color: #d9fce4;
+    background-color: #9ae1b1;
     color: rgb(53, 53, 53);
     .container{
         width: 100%;
@@ -19,24 +19,70 @@
 
             h1{
                 font-size: 40px;
+
+                i{
+                    font-weight: 350;
+                }
             }
 
             .search{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 5px;
                 .searchInput{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
 
+                    img{
+                        width: 20px;
+                        height: 20px;
+                        margin: 10px;
+                    }
+
+                    input{
+                        border:none;
+                        outline: none;
+                    }
                 }
 
                 button{
-
+                    width: 120px;
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    background-color: #1dbf73;
+                    color: white;
+                    cursor: pointer;
                 }
             }
 
             .popular{
+                display: flex;
+                align-items: center;
+                gap: 10px;
                 span{}
-                button{}
+                button{
+                    color: rgb(53, 53, 53);
+                    background-color: transparent;
+                    border: 1px solid rgb(53, 53, 53);
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                    font-size: 10px;
+                    cursor: pointer;
+                }
 
             }
 
+        }
+
+        .right{
+            img{
+                height: 100%;
+                object-fit: contain;
+            }
         }
         
     }
