@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   padding: 100px 0px;
-  
+  position: relative;
+  overflow: hidden;
+
   .container {
     width: 1400px;
     position: relative;
@@ -10,6 +12,10 @@
 
   .carousel-initialized {
     position: static;
+  }
+
+  .react-multiple-carousel__arrow {
+    z-index: 2;
   }
 
   .carousel-prev,
