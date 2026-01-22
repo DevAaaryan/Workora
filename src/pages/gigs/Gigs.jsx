@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Gigs.scss"
+import {gigs} from '../../data'
+import GigCard from '../../components/gigCard/GigCard'
 const Gigs = () => {
+  const [open, setOpen] = useState(false)
+  const [sort, setsSort] = useState("sales")
+
+  const reSort = (type) => {
+    setsSort(type)
+    setOpen(false)
+  }
   return (
     <div className='gigs'>
       <div className="container">
@@ -18,14 +27,20 @@ const Gigs = () => {
           </div>
           <div className="right">
             <span className='sortBy'>SortBy</span>
-            <span className="sortType">Best Selling</span>
-            <img src="./img/down.png" alt="" />
-            <div className="rightMenu">
-              <span>Newest</span>
-              <span>Best Selling</span>
-            </div>
+            <span className="sortType">{sort === "sales" ? "Best Selling" : "Newest"}</span>
+            <img src="./img/down.png" alt="" onClick={() => setOpen(!open)} />
+            {open && (<div className="rightMenu">
+              {sort === "sales" ? <span onClick={() => { reSort("CreatedAt") }}>Newest</span>
+                : <span onClick={() => { reSort("sales") }}>Best Selling</span>}
+            </div>)}
           </div>
+          
         </div>
+        <div className="cards">
+            {gigs.map(gig => (
+              <GigCard key={gig.id} item={gig} />
+            ))}
+          </div>
       </div>
     </div>
   )
