@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Gigs.scss"
-import {gigs} from '../../data'
+import { gigs } from '../../data'
 import GigCard from '../../components/gigCard/GigCard'
 const Gigs = () => {
   const [open, setOpen] = useState(false)
@@ -13,7 +13,10 @@ const Gigs = () => {
   return (
     <div className='gigs'>
       <div className="container">
-        <span className="breadcrumbs">Workora > Graphics & Design > </span>
+        <span className="breadcrumbs">
+          Workora &gt; Graphics &amp; Design &gt;
+        </span>
+
         <h1>AI Artists</h1>
         <p>
           Explore the boundaries of art and technology with Workora's AI artists
@@ -34,13 +37,13 @@ const Gigs = () => {
                 : <span onClick={() => { reSort("sales") }}>Best Selling</span>}
             </div>)}
           </div>
-          
+
         </div>
         <div className="cards">
-            {gigs.map(gig => (
-              <GigCard key={gig.id} item={gig} />
-            ))}
-          </div>
+          {gigs.map(gig => (
+            <GigCard key={gig.id} item={gig} />
+          ))}
+        </div>
       </div>
     </div>
   )
