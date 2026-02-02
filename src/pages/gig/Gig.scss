@@ -1,0 +1,125 @@
+.gig {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1400px;
+        padding: 30px 0px;
+        display: flex;
+        gap: 50px;
+
+        .left {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+
+            .breadcrumbs {
+                font-weight: 300;
+                font-size: 13px;
+                color: #555;
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .pp {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                .stars {
+                    display: flex;
+                    align-items: center;
+                    grid-area: 5px;
+
+                    img {
+                        width: 14px;
+                        height: 14px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #ffc108;
+                    }
+                }
+            }
+
+            .slider {
+                background-color: #F5F5F5;
+
+                img {
+                    max-height: 500px;
+                    object-fit: contain;
+                }
+            }
+
+            h2 {
+                font-weight: 400;
+            }
+
+            p {
+                font-weight: 300;
+                color: #555;
+                line-height: 25px;
+            }
+
+            .seller {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .user {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .stars {
+                            display: flex;
+                            align-items: center;
+                            grid-area: 5px;
+
+                            img {
+                                width: 14px;
+                                height: 14px;
+                            }
+
+                            span {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: #ffc108;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            flex: 1;
+        }
+    }
+}
