@@ -4,12 +4,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Gig.scss"
 const Gig = () => {
+  const settings = {
+  dots: false,        // Fiverr slider has no dots
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  adaptiveHeight: true
+};
   return (
     <div className="gig">
       <div className="container">
         <div className="left">
-          <span className="breadcrumbs">Liverr > Graphics & Design ></span>
-          <h1>I will create ai generated art for you</h1>
+          <span className="breadcrumbs">
+            Workora &gt; Graphics &amp; Design &gt;
+          </span>          <h1>I will create ai generated art for you</h1>
           <div className="user">
             <img
               className="pp"
@@ -26,7 +36,7 @@ const Gig = () => {
               <span>5</span>
             </div>
           </div>
-          <Slider slidesToShow={1} arrowsScroll={1} className="slider">
+          <Slider {...settings} className="slider">
             <img
               src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
