@@ -2,6 +2,12 @@ import React from 'react'
 import "./Orders.scss"
 import {Link} from 'react-router-dom'
 const Orders = () => {
+
+  const currentUser = {
+        id: 1,
+        username: "Aryan Mishra",
+        isSeller: true
+    }
   return (
     <div className='orders'>
       <div className="container">
@@ -14,7 +20,7 @@ const Orders = () => {
             <th>Image</th>
             <th>Title</th>
             <th>Price</th>
-            <th>Buyer</th>
+            <th>{currentUser?.isSeller ? "Buyer" : "Seller"}</th>
             <th>Contact</th>
           </tr>
 
