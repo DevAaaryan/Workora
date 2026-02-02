@@ -104,7 +104,9 @@ const Navbar = () => {
                         <Link className="link menuLink" to="/">
                             Lifestyle
                         </Link>
-                    </div></>
+                        
+                    </div>
+                    </>
             )}
 
         </div >

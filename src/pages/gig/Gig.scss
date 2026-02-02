@@ -57,8 +57,8 @@
 
             .slider {
                 width: 100%;
-                max-width: 700px; // limits like Fiverr
-                margin: 0 auto; // centers it
+                max-width: 700px; 
+                margin: 0 auto; 
                 position: relative;
 
                 img {
@@ -85,7 +85,7 @@
 
                 .slick-prev:before,
                 .slick-next:before {
-                    color: #b54747; // arrow color
+                    color: #b54747; 
                     font-size: 28px;
                 }
             }
@@ -251,6 +251,79 @@
 
         .right {
             flex: 1;
+            border: 1px solid lightgray;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position:sticky;
+            top: 150px;
+            height: max-content;
+            max-height: 500px;
+
+            .price{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h2{ 
+                    font-weight: 300;
+                }
+                h3{
+                    font-weight: 500;
+                }
+
+            }
+            p{
+                color: gray;
+                margin: 10px 0px;
+            }
+
+            .details{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 14px;
+
+                .item{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    img{
+                        width: 15px;
+                    }
+                }
+            }
+
+            .features{
+                display: flex;
+                gap: 10px;
+                .item{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 300;
+                    color: gray;
+                    font-size: 14px;
+
+                    img{
+                         width: 14px;
+                    }
+                }
+            }
+
+            button{
+                background-color: #1dbf73;
+                cursor: pointer;
+                color: white;
+                border: none;
+                padding: 10px;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
         }
     }
 }
