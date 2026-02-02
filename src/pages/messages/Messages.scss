@@ -11,33 +11,42 @@
             justify-content: space-between;
             align-items: center;
 
-           
+
         }
 
-        table{
+        table {
             width: 100%;
 
-            tr{
-                height: 50px;
+            tr {
+                height: 90px;
 
-                th{
+                th {
                     text-align: left;
                 }
 
-                td{
-                    .img{
-                        width: 50px;
-                        height: 25px;
-                        object-fit: cover;
+                td {
+                    padding: 10;
+
+                    &:first-child {
+                        font-weight: 500;
                     }
 
-                    .delete{
-                        width: 20px;
-                        cursor: pointer;
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        color: #555;
                     }
                 }
 
-                &:nth-child(even){
+                button {
+                    background-color: #1dbf73;
+                    color: white;
+                    font-weight: 500;
+                    border: none;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+                &.active {
                     background-color: #1dbf730f;
                 }
             }
