@@ -1,5 +1,6 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 export const register = async (req, res) => {
     try {
         const hash = bcrypt.hashSync(req.body.password, 10);
@@ -23,8 +24,16 @@ export const login = async (req, res) => {
 
         const isCorrect = bcrypt.compareSync(req.body.password, user.password)
         if(!isCorrect) return res.status(400).send("Wrong password")
-            const {password, ...other} = user._doc
-        res.status(200).send(other)
+
+        const token = jwt.sign({
+            id: user._id,
+            isSeller: user.isSeller,
+
+        }, process.env.JWT_KEY)
+        const {password, ...other} = user._doc
+        res.cookie("access_token", token, {
+            httpOnly: true,
+        }).status(200).send(other)
     } catch (error) {
         res.status(500).send("Something went wrong")
     }
