@@ -24,8 +24,8 @@ const connect = async() => {
     }
 };
 
-app.use(cookieParser());
 app.use(express.json());
+app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
